@@ -2,23 +2,82 @@ body {
   margin: 0;
   padding: 0;
   height: 100vh;
-  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  background: radial-gradient(ellipse at 60% 40%, #23213a 0%, #0E0C10 100%);
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: system-ui, sans-serif;
-  color: white;
+  font-family: 'SF Pro Display', system-ui, sans-serif;
+  color: #fff;
 }
 
 .container {
   text-align: center;
 }
 
+.container.card {
+  background: rgba(24, 22, 34, 0.85);
+  border-radius: 32px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.28);
+  padding: 48px 36px 32px 36px;
+  text-align: center;
+  min-width: 320px;
+  max-width: 360px;
+  backdrop-filter: blur(6px);
+}
+
+.app-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2.2rem;
+}
+
+.app-title-group {
+  text-align: center;
+  margin-top: 0.7rem;
+}
+
+.app-title {
+  margin: 0;
+  font-size: 2.1rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+.app-subtitle {
+  margin: 0.3rem 0 0 0;
+  font-size: 1.08rem;
+  font-weight: 400;
+  color: #bdb8d0;
+  letter-spacing: 0.01em;
+}
+
 .app-icon {
-  width: 120px;
-  height: 120px;
-  border-radius: 22%;
-  margin-bottom: 1rem;
+  width: 110px;
+  height: 110px;
+  /* border-radius: 24px; */
+  /* box-shadow: 0 4px 18px rgba(0,0,0,0.18); */
+  /* border: 2px solid #2d2b3f; */
+  /* background: #181622; */
+  margin-bottom: 0;
+}
+
+.appstore-link {
+  display: inline-block;
+  margin-bottom: 2.2rem;
+  transition: transform 0.18s cubic-bezier(.4,2,.3,1);
+}
+.appstore-link:hover .appstore-img {
+  box-shadow: 0 6px 18px rgba(0,0,0,0.22);
+  transform: scale(1.04);
+}
+.appstore-img {
+  width: 180px;
+  height: auto;
+  /* border-radius: 18px; */
+  /* box-shadow: 0 2px 8px rgba(0,0,0,0.13); */
+  transition: box-shadow 0.2s, transform 0.18s;
+  /* background: #fff; */
 }
 
 h1 {
@@ -26,31 +85,54 @@ h1 {
 }
 
 .store-button {
-  display: inline-block;
-  padding: 12px 24px;
-  background: white;
-  color: #2575fc;
-  font-weight: bold;
-  border-radius: 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 22px;
+  background: #0070c9;
+  color: #fff;
+  font-weight: 500;
+  font-size: 1rem;
+  /* border-radius: 24px; */
   text-decoration: none;
-  transition: 0.3s;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+  transition: background 0.2s, box-shadow 0.2s;
+  border: none;
 }
 
 .store-button:hover {
-  background: #f0f0f0;
+  background: #005fa3;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.18);
+}
+
+.store-button .appstore-logo {
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 footer {
-  margin-top: 2rem;
-  font-size: 0.85rem;
+  margin-top: 1.2rem;
+  font-size: 0.97rem;
+  color: #bdb8d0;
+  letter-spacing: 0.01em;
 }
 
 footer a {
-  color: white;
+  color: #bdb8d0;
   text-decoration: none;
-  margin: 0 8px;
+  margin: 0 10px;
+  transition: color 0.18s;
 }
 
 footer a:hover {
+  color: #fff;
   text-decoration: underline;
+}
+
+footer .dot {
+  color: #6c6783;
+  font-size: 1.2em;
+  vertical-align: middle;
 }
